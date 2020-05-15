@@ -1,7 +1,6 @@
 package com.joloplay.checkandroidsignature.interceptor;
 
 import com.joloplay.checkandroidsignature.util.IPKit;
-import com.joloplay.checkandroidsignature.util.MapCache;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -18,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 public class BaseInterceptor implements HandlerInterceptor {
 	private static final String USER_AGENT = "user-agent";
 
-	private MapCache cache = MapCache.single();
 
 
 	@Override
@@ -26,7 +24,7 @@ public class BaseInterceptor implements HandlerInterceptor {
 		String uri = request.getRequestURI();
 
 		log.info("UserAgent: {}", request.getHeader(USER_AGENT));
-		log.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
+		log.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIp(request));
 		//请求拦截处理
 		//设置get请求的token
 /*		if (request.getMethod().equals("GET")) {
