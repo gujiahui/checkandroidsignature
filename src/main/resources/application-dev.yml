@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+checkSignature_file_path: C:/Users/gjh/Desktop/checkSignature20200511/CheckAndroidSignature/test/
+#jolo.time.cron: 0 25/30 * * * ?
+jolo.time.cron: 0 40 0/1 * * ?
+#jolo.time.cron: 0/30 * * * * ?
+jolo.time.fixedDelay: 5000
+
+  #spring线程池
+task-executor.core_pool_size: 1
+task-executor.max_pool_size: 20
+task-executor.queue-capacity: 40
+task-executor.name-prefix: async-service-
