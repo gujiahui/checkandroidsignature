@@ -1,10 +1,6 @@
 package com.joloplay.checkandroidsignature.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.android.apksigner.ApkSignerTool;
-import com.joloplay.checkandroidsignature.bean.SignatureVersionEntity;
 import com.joloplay.checkandroidsignature.common.ConstanUtils;
 import com.joloplay.checkandroidsignature.service.CheckSignatureVersionService;
 import com.joloplay.checkandroidsignature.util.DownloadFileUtils;
